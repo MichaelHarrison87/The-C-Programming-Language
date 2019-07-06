@@ -1,3 +1,7 @@
+/* 
+Exercise 1.17: Print only lines that are longer than some given length 
+*/
+
 #include <stdio.h>
 #define MAXLINE 1000 // max input line size
 #define MINLINE 4 // only prints lines longer than this many characters
@@ -7,7 +11,6 @@ int get_line_length(char line[], int limit); // reads a char array representing 
 
 int main(void)
 {
-    /* Prints the longest input line observed that is as- or shorter than- MAXLINE (including the newline) */
     int len; // length of current line
     char line[MAXLINE]; // character array to store current line
 

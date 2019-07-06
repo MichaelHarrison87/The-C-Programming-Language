@@ -1,5 +1,10 @@
+/* 
+Exercise 1.19: Prints out each input line in reverse 
+*/
+
 #include <stdio.h>
 #define MAXLINE 1000 // max input line size
+
 
 // Function prototypes
 int get_line_length(char line[], int limit); // reads a char array representing a line and the a size limit, returns the length of the line
@@ -7,7 +12,6 @@ int get_line_length(char line[], int limit); // reads a char array representing 
 
 int main(void)
 {
-    /* Prints each without leading or trailing whitespace (tabs, spaces) */
     int len; // length of current line
     char line[MAXLINE]; // character array to store current line
     int lead_end, trail_start; // indices for the end of the leading whitespace, and start of trailing whitespace
