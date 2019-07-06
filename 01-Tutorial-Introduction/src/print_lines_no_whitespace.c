@@ -38,17 +38,12 @@ int main(void)
             j--;            
         }
 
-        if (lead_end == 0 && trail_start == 0){
-            printf("Both 0: %d %d\n", lead_end, trail_start);
-            printf("%s",line);
-        } else{
-            printf("Lead End: %d, Trail Start: %d\n", lead_end, trail_start);
-            printf("Remove Whitespace: '");
-            for (int i = lead_end; i<= trail_start; i++){
-                printf("%c", line[i]);
-            }
-            printf("'");
+        printf("Lead End: %d, Trail Start: %d\n", lead_end, trail_start);
+        printf("Remove Whitespace: '");
+        for (int i = lead_end; i <= trail_start; i++){
+            printf("%c", line[i]);
         }
+        printf("'");
         printf("\n--------------------\n");
     }
 
