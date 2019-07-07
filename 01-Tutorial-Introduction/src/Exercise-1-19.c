@@ -14,41 +14,14 @@ int main(void)
 {
     int len; // length of current line
     char line[MAXLINE]; // character array to store current line
-    int lead_end, trail_start; // indices for the end of the leading whitespace, and start of trailing whitespace
 
     while((len = get_line_length(line, MAXLINE)) > 0){
-        lead_end = trail_start = 0; // reset for each line
 
-        // print whole line by char, for reference:
-        printf("Len: %d\n", len);
-        printf("Ref Line: ");
-        for (int i=0; i<len; i++)
-            printf("'%c': %d", line[i], (line[i] != ' ') && (line[i] != '\t')); 
-        printf("\nLead: %d, Trail: %d", lead_end, trail_start);
-        printf("\n--------------------\n");
-
-        // Find end of leading whitespace: walk through each char until encounter non-whitespace
-        int i = 0;
-        while ((i < len) && ((line[i] == ' ') || (line[i] == '\t'))){
-            i++;   
-        }
-        lead_end = i;
-
-        // Find end of trailing whitespace - walk backwards through the line until encounter non-whitespace
-        int j = len-1;
-        while ((j >= 0) && (trail_start == 0)){
-             if ((line[j] != ' ') && (line[j] != '\t'))
-                trail_start = j;
-            j--;            
-        }
-
-        printf("Lead End: %d, Trail Start: %d\n", lead_end, trail_start);
-        printf("Remove Whitespace: '");
-        for (int i = lead_end; i <= trail_start; i++){
+        printf("'");
+        for(int i = len-1; i>=0; i--){
             printf("%c", line[i]);
         }
-        printf("'");
-        printf("\n--------------------\n");
+        printf("'\n");
     }
 
 
